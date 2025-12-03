@@ -1,0 +1,91 @@
+.wrapper {
+  --spacing-x: 68px;
+  --border-spacing: 8px;
+
+  display: flex;
+  padding: 10px 0 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  padding-inline: var(--spacing-x);
+  padding-block-end: var(--border-spacing);
+}
+
+.selector {
+  color: var(--color-premier-markets);
+
+  .selected {
+    position: relative;
+    color: var(--color-primary);
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: calc(var(--separator-spacing) * 2);
+      bottom: calc(var(--border-spacing) * -1);
+      left: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+  }
+
+  /* The last element selected doesn't have padding to the right,
+  so the right position should be 0 */
+  .selected:last-child::before {
+    right: 0;
+  }
+}
+
+.border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-border-grey);
+  height: 1px;
+  width: 100%;
+}
+
+.topNav {
+  flex-shrink: 1;
+}
+
+@media (max-width: 600px) {
+  /* Only show language selector on mobile */
+  .topNav > a {
+    display: none;
+  }
+}
+
+.withSeparator {
+  --separator-spacing: 6px;
+
+  display: flex;
+  gap: var(--separator-spacing);
+
+  > *:not(:last-child)::after {
+    padding-inline-start: var(--separator-spacing);
+    content: "|";
+    color: #d6d6d6;
+  }
+}
+
+.languageSelector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+}
+
+.iconWrapper {
+  --size: 1.1rem;
+
+  width: var(--size);
+  height: var(--size);
+}
