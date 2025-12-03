@@ -1,5 +1,5 @@
 const config = {
-  plugins: {},
+  plugins: { "postcss-nested": {} },
 };
 
 export default config;
