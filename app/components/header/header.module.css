@@ -153,14 +153,6 @@
   }
 }
 
-.registerButton {
-  background-color: var(--color-primary);
-  /* Pill-like shape */
-  border-radius: 100vw;
-  padding: 10px 21px;
-  color: var(--color-neutral-white);
-}
-
 @media (max-width: 600px) {
   /* Only show language selector on mobile */
   .topNav {

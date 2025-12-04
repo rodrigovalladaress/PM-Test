@@ -1,0 +1,54 @@
+.hero {
+  --spacing-y: 104px;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--spacing-y) var(--spacing-y) 0;
+  background-color: red;
+  background: linear-gradient(138deg, #320002 0%, #900006 33%);
+  color: var(--color-neutral-white);
+  gap: 40px;
+  overflow: hidden;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.textContentWrapper {
+  flex-basis: 26rem;
+  max-width: 26rem;
+}
+
+.title {
+  font-size: 4.375rem;
+  font-weight: 600;
+  line-height: 1.02;
+  margin-block-end: 1.25rem;
+}
+
+.descriptionWrapper {
+  font-size: 1.25rem;
+  margin-block-end: 2.875rem;
+}
+
+.buttonsWrapper {
+  display: flex;
+  gap: 36px;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-basis: 322px;
+}
+
+.image {
+  display: flex;
+  transform: translateY(14%);
+  height: auto;
+  max-width: 452px;
+  object-fit: contain;
+}

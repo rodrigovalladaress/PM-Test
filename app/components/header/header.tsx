@@ -5,6 +5,7 @@ import LogoIcon from "@/public/svg/logo.inline.svg";
 import UserIcon from "@/public/svg/user.inline.svg";
 
 import styles from "./header.module.css";
+import { Button } from "../button/button";
 
 const TOP_LINKS = ["WebTrader", "Support", "Open Demo"];
 const MAIN_LINKS = [
@@ -69,9 +70,7 @@ export function Header() {
 
             <div className={styles.registrationWrapper}>
               <li>
-                <Link className={styles.registerButton} href="#">
-                  Register
-                </Link>
+                <Button href="#">Register</Button>
               </li>
 
               <li>

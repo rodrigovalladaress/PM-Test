@@ -1,0 +1,8 @@
+.button {
+  /* Pill-like shape */
+  border-radius: 100vw;
+  padding: 10px 21px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--border-color);
+}
