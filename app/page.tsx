@@ -1,6 +1,7 @@
 import { CurrenciesSection } from "./components/currencies-section/currencies-section";
 import { Header } from "./components/header/header";
 import { Hero } from "./components/hero/hero";
+import { AccessSection } from "./components/access-section/access-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Hero />
       <CurrenciesSection />
+      <AccessSection />
     </div>
   );
 }

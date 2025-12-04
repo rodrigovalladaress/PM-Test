@@ -7,7 +7,7 @@
 
   --layout-spacing-x: 68px;
 
-  --max-content-width: 1400px;
+  --max-content-width: 1300px;
 }
 
 body {
@@ -41,4 +41,12 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
 }

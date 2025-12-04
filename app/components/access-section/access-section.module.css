@@ -1,0 +1,58 @@
+.wrapper {
+  background-image: url("/images/access-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 60px 174px 95px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-content-width);
+  color: var(--color-neutral-white);
+}
+
+.title {
+  font-size: 3.875rem;
+  font-weight: 600;
+  margin-block-end: 28px;
+  text-align: center;
+}
+
+.primaryText {
+  color: var(--color-primary);
+}
+
+.textContent {
+  margin-block-end: 40px;
+  max-width: 35.25rem;
+}
+
+.buttonsWrapper {
+  display: flex;
+  gap: 41px;
+}
+
+.buttonContent {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 262px);
+  gap: 26px;
+  width: 100%;
+  justify-content: center;
+  margin-block: 62px 95px;
+}

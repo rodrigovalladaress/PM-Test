@@ -5,7 +5,7 @@ import { Button } from "../button/button";
 
 export function Hero() {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.textContentWrapper}>
           <h1 className={styles.title}>Trade Forex with Premier Markets</h1>
@@ -38,6 +38,6 @@ export function Hero() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
