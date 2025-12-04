@@ -2,6 +2,7 @@ import { CurrenciesSection } from "./components/currencies-section/currencies-se
 import { Header } from "./components/header/header";
 import { Hero } from "./components/hero/hero";
 import { AccessSection } from "./components/access-section/access-section";
+import { JoinSection } from "./components/join-section/join-section";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <CurrenciesSection />
       <AccessSection />
+      <JoinSection />
     </div>
   );
 }
