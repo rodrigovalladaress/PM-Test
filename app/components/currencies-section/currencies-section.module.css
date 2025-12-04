@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 47px 106px;
+  justify-content: space-between;
+  gap: 29px;
+}

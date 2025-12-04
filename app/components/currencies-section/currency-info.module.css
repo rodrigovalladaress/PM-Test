@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 18px 30px;
+  font-family: Inter;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 100vw;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 20%);
+}
+
+.redNumbers {
+  color: var(--color-primary);
+}
