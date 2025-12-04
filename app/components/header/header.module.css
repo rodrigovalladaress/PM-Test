@@ -3,6 +3,7 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10px 0 8px;
   font-size: 0.875rem;
   font-weight: 500;
@@ -10,9 +11,17 @@
 
 .top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
   position: relative;
   padding-inline: var(--layout-spacing-x);
+}
+
+.topContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-content-width);
   padding-block-end: var(--border-spacing);
 }
 
@@ -84,8 +93,16 @@
 
 .main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 23px var(--layout-spacing-x) 22px;
+  width: 100%;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-content-width);
 }
 
 .logoWrapper {

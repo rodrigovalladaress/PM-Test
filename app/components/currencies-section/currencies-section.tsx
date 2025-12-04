@@ -34,9 +34,11 @@ const CURRENCY_INFO: CurrencyInfoData[] = [
 export function CurrenciesSection() {
   return (
     <div className={styles.wrapper}>
-      {CURRENCY_INFO.map((info, i) => (
-        <CurrencyInfo key={i} {...info} />
-      ))}
+      <div className={styles.content}>
+        {CURRENCY_INFO.map((info, i) => (
+          <CurrencyInfo key={i} {...info} />
+        ))}
+      </div>
     </div>
   );
 }

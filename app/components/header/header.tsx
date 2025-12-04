@@ -21,66 +21,69 @@ export function Header() {
     <div className={styles.wrapper}>
       <div className={styles.top}>
         <div className={styles.border}></div>
+        <div className={styles.topContent}>
+          <div className={`${styles.selector} ${styles.withSeparator}`}>
+            <button className={styles.selected}>Personal</button>
+            <button>Institutional</button>
+          </div>
 
-        <div className={`${styles.selector} ${styles.withSeparator}`}>
-          <button className={styles.selected}>Personal</button>
-          <button>Institutional</button>
-        </div>
+          <nav className={styles.topNav}>
+            <ul className={styles.withSeparator}>
+              {TOP_LINKS.map((label) => (
+                <li key={label}>
+                  <Link href="#">{label}</Link>
+                </li>
+              ))}
+              <li className={styles.languageSelectorWrapper}>
+                <button>
+                  <span className={styles.languageSelector}>
+                    <div className={styles.iconWrapper}>
+                      <UkIcon />
+                    </div>
 
-        <nav className={styles.topNav}>
-          <ul className={styles.withSeparator}>
-            {TOP_LINKS.map((label) => (
-              <li key={label}>
-                <Link href="#">{label}</Link>
+                    <span>EN</span>
+                  </span>
+                </button>
               </li>
-            ))}
-            <li className={styles.languageSelectorWrapper}>
-              <button>
-                <span className={styles.languageSelector}>
-                  <div className={styles.iconWrapper}>
-                    <UkIcon />
-                  </div>
-
-                  <span>EN</span>
-                </span>
-              </button>
-            </li>
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <div className={styles.main}>
-        <nav className={styles.mainNav}>
-          <ul>
-            <li>
-              <Link className={styles.logoWrapper} href="/">
-                <LogoIcon />
-              </Link>
-            </li>
-
-            <div className={styles.mainNavCenter}>
-              {MAIN_LINKS.map((label) => (
-                <li className={styles.mainLinkWrapper} key={label}>
-                  <Link className={styles.mainLink} href="#">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </div>
-
-            <div className={styles.registrationWrapper}>
+        <div className={styles.mainContent}>
+          <nav className={styles.mainNav}>
+            <ul>
               <li>
-                <Button href="#">Register</Button>
-              </li>
-
-              <li>
-                <Link href="#">
-                  <UserIcon />
+                <Link className={styles.logoWrapper} href="/">
+                  <LogoIcon />
                 </Link>
               </li>
-            </div>
-          </ul>
-        </nav>
+
+              <div className={styles.mainNavCenter}>
+                {MAIN_LINKS.map((label) => (
+                  <li className={styles.mainLinkWrapper} key={label}>
+                    <Link className={styles.mainLink} href="#">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </div>
+
+              <div className={styles.registrationWrapper}>
+                <li>
+                  <Button href="#">Register</Button>
+                </li>
+
+                <li>
+                  <Link href="#">
+                    <UserIcon />
+                  </Link>
+                </li>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   );

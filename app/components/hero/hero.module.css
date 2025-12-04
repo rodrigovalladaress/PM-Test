@@ -1,11 +1,17 @@
-.hero {
+.wrapper {
   --spacing-y: 104px;
 
   display: flex;
-  flex-wrap: wrap;
-  padding: var(--spacing-y) var(--spacing-y) 0;
-  background-color: red;
+  justify-content: center;
   background: linear-gradient(138deg, #320002 0%, #900006 33%);
+  padding: var(--spacing-y) var(--spacing-y) 0;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: var(--max-content-width);
   color: var(--color-neutral-white);
   gap: 40px;
   overflow: hidden;

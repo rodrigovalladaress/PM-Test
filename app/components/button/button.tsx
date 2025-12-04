@@ -46,7 +46,7 @@ export function Button({
   }
 
   return (
-    <Link className={styles.button} href={href} style={style}>
+    <Link className={styles.wrapper} href={href} style={style}>
       {children}
     </Link>
   );
