@@ -25,31 +25,6 @@
   padding-block-end: var(--border-spacing);
 }
 
-.selector {
-  color: var(--color-premier-markets);
-
-  .selected {
-    position: relative;
-    color: var(--color-primary);
-
-    &::before {
-      position: absolute;
-      content: "";
-      right: calc(var(--separator-spacing) * 2);
-      bottom: calc(var(--border-spacing) * -1);
-      left: 0;
-      height: 2px;
-      background-color: var(--color-primary);
-    }
-  }
-
-  /* The last element selected doesn't have padding to the right,
-  so the right position should be 0 */
-  .selected:last-child::before {
-    right: 0;
-  }
-}
-
 .border {
   position: absolute;
   left: 0;
@@ -61,19 +36,6 @@
 
 .topNav {
   flex-shrink: 1;
-}
-
-.withSeparator {
-  --separator-spacing: 6px;
-
-  display: flex;
-  gap: var(--separator-spacing);
-
-  > *:not(:last-child)::after {
-    padding-inline-start: var(--separator-spacing);
-    content: "|";
-    color: #d6d6d6;
-  }
 }
 
 .languageSelector {
@@ -136,6 +98,12 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+
+  &:last-child {
+    .chevronIconWrapper {
+      display: none;
+    }
+  }
 }
 
 .registrationWrapper {
@@ -144,16 +112,13 @@
   align-items: center;
 }
 
-.mainLinkWrapper:not(:last-child) .mainLink {
-  &::after {
-    content: url("@/public/svg/chevron-down.svg");
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    padding-inline-start: 0.5rem;
-    /* Optical alignment */
-    transform: translateY(3px);
-  }
+.chevronIconWrapper {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding-inline-start: 0.5rem;
+  /* Optical alignment */
+  transform: translateY(3px);
 }
 
 .mainLinkWrapper:last-child {

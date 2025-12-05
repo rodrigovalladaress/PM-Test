@@ -1,0 +1,43 @@
+.wrapper {
+  color: var(--color-premier-markets);
+}
+
+.button {
+  position: relative;
+  transition: color 350ms ease-in;
+
+  &:hover {
+    color: var(--color-primary);
+    transition: color 150ms ease-out;
+  }
+}
+
+.border {
+  position: absolute;
+  content: "";
+  right: calc(var(--separator-spacing) * 2);
+  bottom: calc(var(--border-spacing) * -1);
+  left: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: scaleX(0%);
+  transition: transform 150ms ease-in;
+
+  &.selected {
+    transition: transform 350ms ease-in;
+  }
+}
+
+.selected {
+  color: var(--color-primary);
+
+  .border {
+    transform: scaleX(100%);
+  }
+}
+
+button:last-child .border {
+  /* The last element selected doesn't have padding to the right,
+    so the right position should be 0 */
+  right: 0;
+}

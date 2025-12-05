@@ -3,9 +3,11 @@ import Link from "next/link";
 import UkIcon from "@/public/svg/uk.inline.svg";
 import LogoIcon from "@/public/svg/logo.inline.svg";
 import UserIcon from "@/public/svg/user.inline.svg";
+import ChevronDownIcon from "@/public/svg/chevron-down.inline.svg";
 
 import styles from "./header.module.css";
 import { Button } from "../button/button";
+import { HeaderSelector } from "./header-selector";
 
 const TOP_LINKS = ["WebTrader", "Support", "Open Demo"];
 const MAIN_LINKS = [
@@ -22,13 +24,10 @@ export function Header() {
       <div className={styles.top}>
         <div className={styles.border}></div>
         <div className={styles.topContent}>
-          <div className={`${styles.selector} ${styles.withSeparator}`}>
-            <button className={styles.selected}>Personal</button>
-            <button>Institutional</button>
-          </div>
+          <HeaderSelector />
 
           <nav className={styles.topNav}>
-            <ul className={styles.withSeparator}>
+            <ul className="withSeparator">
               {TOP_LINKS.map((label) => (
                 <li key={label}>
                   <Link href="#">{label}</Link>
@@ -64,7 +63,11 @@ export function Header() {
                 {MAIN_LINKS.map((label) => (
                   <li className={styles.mainLinkWrapper} key={label}>
                     <Link className={styles.mainLink} href="#">
-                      {label}
+                      <span>{label}</span>
+
+                      <span className={styles.chevronIconWrapper}>
+                        <ChevronDownIcon />
+                      </span>
                     </Link>
                   </li>
                 ))}
