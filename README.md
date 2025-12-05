@@ -13,3 +13,18 @@ npm run dev
 - I wasn't sure what the 'Personal' and 'Institutional' would do, so I chose to have them as button elements. If they are links, they should be anchor elements instead.
 - On the top right of the header, there's a Palestine flag with the words 'EN' on the right. I assume this is a language selector and the Palestine flag is an error, so I'm using the UK flag instead to convey that's the English language selected.
 - There's not a clear 'max width content' on the designs, so I chose 1400px.
+- I simplified some of the styles to reduce development time:
+  - No curve on the hero section.
+  - No gradient on the border of some buttons, but a solid color.
+
+## TODOS
+
+- [ ] Add the curve on the hero section with clip-path
+- [ ] Add gradient border to the buttons (with an absolute position element behind the button)
+- [ ] Our markets section
+- [ ] Empower your trading section
+- [ ] Seamless withdrawals section
+- [ ] Everything you need section
+- [ ] Permier traders section
+- [ ] Footer section
+- [ ] Add some animations to other buttons
